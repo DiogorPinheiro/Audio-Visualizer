@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="373.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="audiointerface.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Button fx:id="input" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#inputAudio" text="Input" />
+      <Button fx:id="output" layoutX="526.0" layoutY="14.0" mnemonicParsing="false" text="Output" />
+      <TextField fx:id="info" layoutY="346.0" prefHeight="27.0" prefWidth="455.0" />
+      <Button fx:id="play" layoutX="76.0" layoutY="14.0" mnemonicParsing="false" onAction="#playAudio" text="Play" />
+      <Button fx:id="stop" layoutX="126.0" layoutY="14.0" mnemonicParsing="false" onAction="#stop" text="Stop" />
+      <Slider fx:id="volume" layoutX="549.0" layoutY="165.0" orientation="VERTICAL" />
+      <Slider fx:id="pitch" layoutX="173.0" layoutY="75.0" prefHeight="16.0" prefWidth="287.0" />
+      <Slider fx:id="pan" layoutX="173.0" layoutY="104.0" prefHeight="16.0" prefWidth="287.0" />
+      <AreaChart layoutX="53.0" layoutY="137.0" prefHeight="188.0" prefWidth="455.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <Label layoutX="534.0" layoutY="317.0" text="Volume" />
+      <Label layoutX="82.0" layoutY="75.0" text="Pitch Shifter" />
+      <Label layoutX="103.0" layoutY="104.0" text="Pan" />
+    </children>
+</AnchorPane>
